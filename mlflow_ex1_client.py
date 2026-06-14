@@ -4,7 +4,7 @@ import json
 def predict_sentiment(texts: list[str]) -> dict:
     """Send review texts to the MLflow model server and get predictions."""
     response = requests.post(
-        url="http://localhost:5001/invocations", 
+        url="http://localhost:5002/invocations", 
         headers={"Content-Type": "application/json"},
         data=json.dumps({"inputs": texts})
     )
